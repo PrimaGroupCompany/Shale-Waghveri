@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boutique Hotel Shale | Luxury Stay in Batumi</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: #fdf6f0;
+      color: #3e3a39;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://via.placeholder.com/1200x400?text=Hotel+Shale+Tsagveri') center/cover no-repeat;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 3rem;
+      letter-spacing: 4px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.25rem;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    nav {
+      background-color: #6d5a49;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #f2e8dc;
+      text-decoration: none;
+      margin: 0 25px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d4c5a5;
+    }
+
+    #themeToggle {
+      background: none;
+      border: none;
+      color: #f2e8dc;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      border-bottom: 3px solid #6d5a49;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .room-listing {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .room-listing img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .room-listing {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .room-listing > div {
+        width: calc(50% - 10px);
+      }
+    }
+
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 12px 15px;
+      margin-top: 10px;
+      border: 1px solid #b9a58a;
+      border-radius: 5px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+
+    form input:focus, form select:focus, form textarea:focus {
+      border-color: #6d5a49;
+      outline: none;
+    }
+
+    form button {
+      background-color: #4a3c31;
+      color: #f2e8dc;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #6d5a49;
+    }
+
+    #confirmation {
+      background: #e6dccd;
+      border: 2px solid #6d5a49;
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 20px;
+      display: none;
+    }
+
+    #totalPrice {
+      font-size: 1.1rem;
+      color: #4a3c31;
+    }
+
+    footer {
+      background-color: #4a3c31;
+      color: #f2e8dc;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    /* Dark Mode */
+    body.dark {
+      background: #2e2b28;
+      color: #f2e8dc;
+    }
+
+    body.dark header, body.dark footer, body.dark nav {
+      background-color: #1f1d1b;
+    }
+
+    body.dark input, body.dark select, body.dark textarea {
+      background-color: #3e3a39;
+      color: #f2e8dc;
+      border-color: #776a5f;
+    }
+
+    body.dark #totalPrice {
+      color: #f2e8dc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hotel Shale Wakhveri</h1>
+    <p>Luxury & Comfort in Batumi, Georgia</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact</a>
+    <button id="themeToggle" type="button">🌙</button>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Welcome to Boutique Hotel Shale, nestled in the snowy peaks of Wakhveri. Enjoy elegance, comfort, and modern amenities for the perfect getaway.</p>
+      <p>We have 11 rooms, 2 of which are suites.</p>
+    </section>
+
+    <section id="rooms">
+      <h2>Our Rooms</h2>
+      <div class="room-listing">
+        <div>
+          <img src="https://i.imgur.com/jjQXi4r.jpeg" alt="4 Bed Room" />
+          <p><strong>4 Bed Room</strong> - ₾150/night</p>
+        </div>
+        <div>
+          <img src="https://i.imgur.com/g0KTEf9.jpeg" alt="Family Suite" />
+          <p><strong>3 Bed Room</strong> - ₾130/night</p>
+        </div>
+                <div>
+          <img src="https://i.imgur.com/UArnJnY.jpeg" alt="Family Suite" />
+          <p><strong> 2 Bed Room</strong> - ₾100/night</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking">
+      <h2>Book Your Stay</h2>
+      <form id="bookingForm" action="https://formspree.io/f/mwpqnrqg" method="POST">
+        <input type="text" name="Full Name" placeholder="Full Name" required />
+        <input type="email" name="Email" placeholder="Email" required />
+        <input type="tel" name="Phone" placeholder="Phone Number" required />
+        <input type="date" name="Check-in Date" required />
+        <input type="date" name="Check-out Date" required />
+        <input type="number" name="Guests" placeholder="Number of Guests" required />
+        <select name="Room Type" required>
+          <option value="">Select Room Type</option>
+          <option value="Standard Room">Standard Room</option>
+          <option value="Deluxe Room">Deluxe Room</option>
+          <option value="Family Suite">Family Suite</option>
+        </select>
+        <textarea name="Special Requests" placeholder="Special Requests (optional)"></textarea>
+        <button type="submit">Submit Booking Request</button>
+      </form>
+
+      <p id="totalPrice" style="margin-top: 20px; font-weight: bold;"></p>
+      <div id="confirmation"></div>
+    </section>
+
+    <section id="testimonials">
+      <h2>Guest Reviews</h2>
+      <blockquote>"Amazing hospitality and cozy rooms!" – Ana K.</blockquote>
+      <blockquote>"Perfect location near slopes, will visit again!" – Giorgi M.</blockquote>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>📍 Bakuriani, Georgia</p>
+      <p>📧 tsagverishale@gmail.com</p>
+      <p>📞 +995 555 39 33 93</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Boutique Hotel Shale</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    const confirmation = document.getElementById('confirmation');
+    const totalPriceEl = document.getElementById('totalPrice');
+
+    const roomRates = {
+      'Standard Room': 50,
+      'Deluxe Room': 70,
+      'Family Suite': 90
+    };
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      const checkin = new Date(form['Check-in Date'].value);
+      const checkout = new Date(form['Check-out Date'].value);
+
+      if (checkout <= checkin) {
+        alert('Check-out date must be after check-in date.');
+        return;
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          const fullname = form['Full Name'].value;
+          const email = form['Email'].value;
+          const phone = form['Phone'].value;
+          const guests = form['Guests'].value;
+          const roomtype = form['Room Type'].value;
+          const requests = form['Special Requests'].value || 'None';
+
+          confirmation.innerHTML = `
+            <h3>Thank you for your booking, ${fullname}!</h3>
+            <p>We have received your booking request:</p>
+            <ul>
+              <li><strong>Email:</strong> ${email}</li>
+              <li><strong>Phone:</strong> ${phone}</li>
+              <li><strong>Check-in:</strong> ${form['Check-in Date'].value}</li>
+              <li><strong>Check-out:</strong> ${form['Check-out Date'].value}</li>
+              <li><strong>Guests:</strong> ${guests}</li>
+              <li><strong>Room:</strong> ${roomtype}</li>
+              <li><strong>Requests:</strong> ${requests}</li>
+            </ul>
+            <p>We will contact you soon to confirm your reservation.</p>
+          `;
+          confirmation.style.display = 'block';
+          form.style.display = 'none';
+          totalPriceEl.style.display = 'none';
+        } else {
+          alert('There was an error submitting the form. Please try again.');
+        }
+      } catch (error) {
+        alert('Submission failed. Please check your internet connection.');
+      }
+    });
+
+    function calculatePrice() {
+      const roomType = form['Room Type'].value;
+      const checkin = new Date(form['Check-in Date'].value);
+      const checkout = new Date(form['Check-out Date'].value);
+
+      if (!roomType || isNaN(checkin) || isNaN(checkout) || checkout <= checkin) {
+        totalPriceEl.textContent = '';
+        return;
+      }
+
+      const nights = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
+      const rate = roomRates[roomType];
+      const total = nights * rate;
+
+      totalPriceEl.textContent = `Estimated Total Price: $${total} (${nights} night${nights > 1 ? 's' : ''} @ $${rate}/night)`;
+    }
+
+    form['Room Type'].addEventListener('change', calculatePrice);
+    form['Check-in Date'].addEventListener('change', calculatePrice);
+    form['Check-out Date'].addEventListener('change', calculatePrice);
+
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
